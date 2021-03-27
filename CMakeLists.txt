@@ -28,6 +28,8 @@ else ()
             )
 endif()
 
+
+
 install(TARGETS otus_print RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
