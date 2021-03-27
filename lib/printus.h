@@ -7,7 +7,7 @@
 
 
 template<class T>
-typename std::enable_if<std::is_integral_v<T>, T>::type
+typename std::enable_if<std::is_integral<T>::value, T>::type
 print_ip(const T& octet) {
     static constexpr uint8_t b_size = 8, m_byte = 255, b_shift = 1;
     for (auto sz = sizeof(T); sz != 0; --sz) {
