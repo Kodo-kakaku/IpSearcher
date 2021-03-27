@@ -16,7 +16,7 @@ print_ip(const T& octet) {
     return {};
 }
 
-//
+// string
 template<typename T>
 struct is_string {
     static const bool value = false;
@@ -32,7 +32,6 @@ template <typename T>
 typename std::enable_if<is_string<T>::value>::type print_ip(const T& octet) {
     std::cout << octet;
 }
-
 
 // Vector and List
 template<typename T>
@@ -89,6 +88,6 @@ struct unpack_tuple<Type, ArgPos, ArgPos> {
 
 template<typename ...Args>
 typename std::enable_if_t<are_same<Args...>::value, void> print_ip(const std::tuple<Args...> &octet) {
-    constexpr int num_args_tuple = std::tuple_size<std::tuple<Args...>>::value;
+    constexpr unsigned num_args_tuple = std::tuple_size<std::tuple<Args...>>::value;
     unpack_tuple<std::tuple<Args...>, 0, num_args_tuple - 1>::print_tuple(octet);
 }
