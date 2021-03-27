@@ -1,5 +1,5 @@
 #include <iostream>
-#include "printus.h"
+#include "../lib/printus.h"
 
 int main() {
 
