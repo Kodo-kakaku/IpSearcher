@@ -14,7 +14,7 @@ include_directories(lib)
 include_directories(src)
 
 add_executable(otus_print src/main.cpp lib/printus.h)
-set_target_properties(otus_print PROPERTIES CMAKE_CXX_STANDARD 14 CXX_STANDARD_REQUIRED ON)
+set_target_properties(otus_print PROPERTIES CMAKE_CXX_STANDARD 14  CXX_STANDARD_REQUIRED ON)
 target_include_directories(otus_print PRIVATE "${CMAKE_BINARY_DIR}")
 
 
